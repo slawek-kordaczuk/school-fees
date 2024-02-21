@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    com.real.estate.price: INFO
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:estate
+    driver-class-name: org.h2.Driver
+    username: admin
+    password: password
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:data.sql
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: none
+
